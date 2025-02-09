@@ -13,13 +13,13 @@
                             <xs:element name="nombre" type="xs:string"/>
                             <xs:element name="apellidos" type="xs:string"/>
                             
-                            <!-- Identificación: el usuario debe tener DNI o NIF pero no ambos -->
+                            <!-- Identificación: el usuario puede tener DNI, NIF o ambos -->
                             <xs:element name="identificacion">
                                 <xs:complexType>
-                                    <xs:choice>
-                                        <xs:element name="dni" type="xs:string"/>
-                                        <xs:element name="nif" type="xs:string"/>
-                                    </xs:choice>
+                                    <xs:sequence>
+                                        <xs:element name="dni" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="nif" type="xs:string" minOccurs="0"/>
+                                    </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                             
@@ -38,22 +38,33 @@
                                 </xs:complexType>
                             </xs:element>
                             
-                            <!-- Cuenta bancaria -->
+                            <!-- Cuenta bancaria en formato IBAN -->
                             <xs:element name="cuentaBancaria" type="xs:string"/>
                             
                             <!-- Cargo del usuario con valores restringidos -->
                             <xs:element name="cargo">
-                                <xs:simpleType>
-                                    <xs:restriction base="xs:string">
-                                        <xs:enumeration value="Presidente"/>
-                                        <xs:enumeration value="Vicepresidente"/>
-                                        <xs:enumeration value="Secretario"/>
-                                        <xs:enumeration value="Vocal"/>
-                                        <xs:enumeration value="Ninguno"/>
-                                    </xs:restriction>
-                                </xs:simpleType>
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="tipo" use="required">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="Presidente"/>
+                                                        <xs:enumeration value="Vicepresidente"/>
+                                                        <xs:enumeration value="Secretario"/>
+                                                        <xs:enumeration value="Vocal"/>
+                                                        <xs:enumeration value="ninguno"/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
                             </xs:element>
                         </xs:sequence>
+                        
+                        <!-- Atributo codigo del usuario en formato NNNN-LLL -->
+                        <xs:attribute name="codigo" type="xs:string" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

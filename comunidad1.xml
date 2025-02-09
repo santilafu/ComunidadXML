@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Documento XML estructurado según el esquema XSD -->
-<comunidad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="comunidad.xsd">
+<comunidad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="comunidad1.xsd">
     
     <!-- Usuario 1: Javier - Secretario de la comunidad -->
     <usuario codigo="000-AAA">
