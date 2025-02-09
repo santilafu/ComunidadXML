@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Elemento raíz que contiene a todos los usuarios de la comunidad -->
+    <xs:element name="comunidad">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Elemento usuario, puede repetirse varias veces -->
+                <xs:element name="usuario" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Datos personales -->
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="apellidos" type="xs:string"/>
+                            
+                            <!-- Identificación: el usuario debe tener DNI o NIF pero no ambos -->
+                            <xs:element name="identificacion">
+                                <xs:complexType>
+                                    <xs:choice>
+                                        <xs:element name="dni" type="xs:string"/>
+                                        <xs:element name="nif" type="xs:string"/>
+                                    </xs:choice>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <!-- Datos de contacto -->
+                            <xs:element name="telefono" type="xs:string"/>
+                            <xs:element name="email" type="xs:string"/>
+                            
+                            <!-- Dirección del usuario -->
+                            <xs:element name="direccion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="portal" type="xs:string"/>
+                                        <xs:element name="piso" type="xs:string"/>
+                                        <xs:element name="letra" type="xs:string" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <!-- Cuenta bancaria -->
+                            <xs:element name="cuentaBancaria" type="xs:string"/>
+                            
+                            <!-- Cargo del usuario con valores restringidos -->
+                            <xs:element name="cargo">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Presidente"/>
+                                        <xs:enumeration value="Vicepresidente"/>
+                                        <xs:enumeration value="Secretario"/>
+                                        <xs:enumeration value="Vocal"/>
+                                        <xs:enumeration value="Ninguno"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
