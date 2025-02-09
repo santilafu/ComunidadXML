@@ -1,0 +1,25 @@
+
+<!ELEMENT comunidad (usuario+)>
+<!ELEMENT usuario (nombre, apellidos, identificacion, telefono, email, direccion, cuentaBancaria, cargo)>
+
+<!ATTLIST usuario codigo CDATA #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+
+<!ELEMENT identificacion (dni | nif | (dni, nif))>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT nif (#PCDATA)>
+
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+ <!-- Se agrupa portal y piso dentro de "direccion" -->
+<!ELEMENT direccion (portal, piso)>
+<!ELEMENT portal (#PCDATA)>
+<!ELEMENT piso (#PCDATA)>
+
+<!ELEMENT cuentaBancaria (#PCDATA)>
+
+<!ELEMENT cargo (#PCDATA)>
+<!ATTLIST cargo tipo (Presidente|Vicepresidente|Secretario|Vocal|ninguno) #REQUIRED>

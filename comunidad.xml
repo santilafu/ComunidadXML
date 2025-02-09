@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE comunidad SYSTEM "comunidad.dtd">
+
+<comunidad>
+    <usuario codigo="000-AAA">
+
+        <nombre>Javier</nombre>
+        <apellidos>Vazquez Garcia</apellidos>
+        <identificacion>
+            <dni>72196238G</dni>
+        </identificacion>
+        <telefono>635089333</telefono>
+        <email>javi@gmail.com</email>
+        <direccion>
+            <portal>1</portal>
+            <piso>Bajo A</piso>
+        </direccion>
+        <cuentaBancaria>ES9121000418450200051332</cuentaBancaria>
+        <cargo tipo="Secretario">Secretario</cargo>
+
+    </usuario>
+
+    <usuario codigo="111-BBB">
+
+        <nombre>Samuel</nombre>
+        <apellidos>Hernandez Soto</apellidos>
+        <identificacion>
+            <dni>73596238A</dni>
+            <nif>Y1234567Z</nif>
+        </identificacion>
+        <telefono>695892322</telefono>
+        <email>Samuelhs@gmail.com</email>
+        <direccion>
+            <portal>1</portal>
+            <piso>1A</piso>
+        </direccion>
+        <cuentaBancaria>ES9121000461230200051332</cuentaBancaria>
+        <cargo tipo="ninguno">ninguno</cargo>
+        
+    </usuario>
+
+    <usuario codigo="111-CCC">
+
+        <nombre>Laura</nombre>
+        <apellidos>Heras Gil</apellidos>
+        <identificacion>
+            <dni>73956789H</dni>
+        </identificacion>
+        <telefono>654987213</telefono>
+        <email>luriHG1996@gmail.com</email>
+        <direccion>
+            <portal>1</portal>
+            <piso>1B</piso>
+        </direccion>
+        <cuentaBancaria>ES9121000418450200053642</cuentaBancaria>
+        <cargo tipo="Presidente">Presidente</cargo>
+        
+    </usuario>
+
+    <usuario codigo="222-AAA">
+
+        <nombre>Antonio</nombre>
+        <apellidos>Alcantara Ruiz</apellidos>
+        <identificacion>
+            <nif>Y1238657G</nif>
+        </identificacion>
+        <telefono>975215987</telefono>
+        <email>antonio1989@gmail.com</email>
+        <direccion>
+            <portal>1</portal>
+            <piso>2A</piso>
+        </direccion>
+        <cuentaBancaria>ES7121000418450200054564</cuentaBancaria>
+        <cargo tipo="Vicepresidente">Vicepresidente</cargo>
+        
+    </usuario>
+
+    <usuario codigo="222-BBB">
+
+        <nombre>Estefan</nombre>
+        <apellidos>Gonzalez Garcia</apellidos>
+        <identificacion>
+            <dni>72856986B</dni>
+        </identificacion>
+        <telefono>975689841</telefono>
+        <email>EstfGG@gmail.com</email>
+        <direccion>
+            <portal>1</portal>
+            <piso>2B</piso>
+        </direccion>
+        <cuentaBancaria>ES2121000418450211054548</cuentaBancaria>
+        <cargo tipo="Vocal">Vocal</cargo>
+        
+    </usuario>
+
+    <usuario codigo="333-AAA">
+
+        <nombre>Angela</nombre>
+        <apellidos>Hernandez Morin</apellidos>
+        <identificacion>
+            <dni>78454578E</dni>
+            <nif>Y1234567E</nif>
+        </identificacion>
+        <telefono>689652674</telefono>
+        <email>angelicaH1994@gmail.com</email>
+        <direccion>
+            <portal>1</portal>
+            <piso>3B</piso>
+        </direccion>
+        <cuentaBancaria>ES3168000418450210064547</cuentaBancaria>
+        <cargo tipo="ninguno">ninguno</cargo>
+        
+    </usuario>
+
+</comunidad>
