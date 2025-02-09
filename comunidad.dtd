@@ -1,25 +1,29 @@
-
+<!-- Definición del elemento raíz -->
 <!ELEMENT comunidad (usuario+)>
+
+<!-- Definición de un usuario con sus datos personales -->
 <!ELEMENT usuario (nombre, apellidos, identificacion, telefono, email, direccion, cuentaBancaria, cargo)>
+<!ATTLIST usuario codigo CDATA #REQUIRED> <!-- El código del usuario es obligatorio -->
 
-<!ATTLIST usuario codigo CDATA #REQUIRED>
-
-<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)> <!-- Contiene solo texto -->
 <!ELEMENT apellidos (#PCDATA)>
 
-<!ELEMENT identificacion (dni | nif | (dni, nif))>
+<!-- Identificación, donde debe tener un DNI o un NIF pero no ambos obligatoriamente -->
+<!ELEMENT identificacion (dni | nif)>
 <!ELEMENT dni (#PCDATA)>
 <!ELEMENT nif (#PCDATA)>
 
-<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)> 
 <!ELEMENT email (#PCDATA)>
 
- <!-- Se agrupa portal y piso dentro de "direccion" -->
-<!ELEMENT direccion (portal, piso)>
+<!-- Dirección, agrupando portal y piso -->
+<!ELEMENT direccion (portal, piso, letra?)>
 <!ELEMENT portal (#PCDATA)>
 <!ELEMENT piso (#PCDATA)>
+<!ELEMENT letra (#PCDATA)>
 
-<!ELEMENT cuentaBancaria (#PCDATA)>
+<!ELEMENT cuentaBancaria (#PCDATA)> 
 
+<!-- Cargo con valores restringidos -->
 <!ELEMENT cargo (#PCDATA)>
-<!ATTLIST cargo tipo (Presidente|Vicepresidente|Secretario|Vocal|ninguno) #REQUIRED>
+<!ATTLIST cargo tipo (Presidente|Vicepresidente|Secretario|Vocal|Ninguno) #REQUIRED>
